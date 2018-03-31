@@ -30,9 +30,9 @@ def ListVacancies(request):
 	workerVacancies = Center.W_vacancies
 	helperVacancies = Center.H_vacancies
 
-	return render(request, "aww/vacancies.html", {'centerName':centerName, 
+	return render(request, "aww/vacancies.html", {'centerName':centerName,
 	'sectorName':sectorName, 'stateList':stateList,'districtList':districtList,
-	'projectList':projectList,'workerVacancies':workerVacancies, 
+	'projectList':projectList,'workerVacancies':workerVacancies,
 	'helperVacancies':helperVacancies})
 
 def ApplyForVacancy(request):
@@ -48,7 +48,7 @@ def ListVacancyResults(request):
 	return render(request, "aww/results.html", {})
 
 def VacancyResult(request, result_id):
-	
+
 	return render(request, "aww/result.html", {})
 
 def ListEligibility(request):
@@ -65,3 +65,6 @@ def Schemes(request):
 
 def ContactUs(request):
 	return render(request,"aww/contact-us.html",{})
+
+def Submit(request):
+	return render(request,"aww/submit.html",{})
