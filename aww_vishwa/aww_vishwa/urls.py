@@ -13,6 +13,7 @@ from aww.views import (
   Guidelines,
   Schemes,
     ContactUs,
+	Submit,
 )
 
 from adminsite.views import (
@@ -37,6 +38,7 @@ admin_site_urlpatterns = [
     	name="admin_applications"),
     url(r'^centers/(?P<center_id>[\d]+)/applications/(?P<application_id>[\d]+)/$', ApplicationInfo,
     	name="admin_applications"),
+
 ]
 
 urlpatterns = i18n_patterns(
@@ -54,4 +56,5 @@ urlpatterns = i18n_patterns(
     url(r'^learning-materials/$', ListLearningMaterials, name="learning_materials"),
 	  url(r'^schemes/$', Schemes, name="schemes"),
     url(r'^contact-us/$', ContactUs, name="contact_us"),
+	url(r'^apply/submit$',Submit,name="submit"),
 )
